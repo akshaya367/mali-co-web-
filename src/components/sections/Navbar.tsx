@@ -165,10 +165,10 @@ export default function Navbar() {
               initial={{ x: "-100%" }}
               animate={{ x: 0 }}
               exit={{ x: "-100%" }}
-              className="fixed inset-y-0 left-0 w-[85vw] bg-[#FDFBF0] z-[201] p-8 flex flex-col justify-between"
+              className="fixed inset-y-0 left-0 w-[85vw] bg-[#FDFBF0] z-[201] p-6 md:p-8 flex flex-col overflow-y-auto"
             >
-              <div className="space-y-12">
-                <div className="flex justify-between items-center mb-16">
+              <div className="flex-1 space-y-8 md:space-y-12">
+                <div className="flex justify-between items-center mb-10 md:mb-16">
                   <span className="text-2xl font-black font-outfit text-chocolate tracking-tighter uppercase">
                      malai <span className="text-chocolate/30">& co.</span>
                   </span>
@@ -177,7 +177,7 @@ export default function Navbar() {
                   </button>
                 </div>
 
-                <div className="flex flex-col gap-6">
+                <div className="flex flex-col gap-4 md:gap-6">
                   {navLinks.map((link, i) => (
                     <motion.div
                       key={link.name}
@@ -188,7 +188,7 @@ export default function Navbar() {
                       <Link 
                         href={link.href} 
                         onClick={() => setIsMobileMenuOpen(false)}
-                        className="text-5xl font-playfair font-bold text-chocolate hover:text-autumn-orange transition-colors flex items-center justify-between group"
+                        className="text-4xl md:text-5xl font-playfair font-bold text-chocolate hover:text-autumn-orange transition-colors flex items-center justify-between group"
                       >
                         {link.name}
                         <Navigation className="w-6 h-6 rotate-90 opacity-0 group-hover:opacity-100 transition-all text-autumn-orange" />
@@ -196,7 +196,7 @@ export default function Navbar() {
                     </motion.div>
                   ))}
                   
-                  <div className="h-px bg-chocolate/10 my-6" />
+                  <div className="h-px bg-chocolate/10 my-4 md:my-6" />
 
                   <motion.div
                     initial={{ opacity: 0, x: -20 }}
@@ -206,7 +206,7 @@ export default function Navbar() {
                     <Link 
                       href="/#customize" 
                       onClick={() => setIsMobileMenuOpen(false)}
-                      className="text-3xl font-playfair font-bold text-sage flex flex-col"
+                      className="text-2xl md:text-3xl font-playfair font-bold text-sage flex flex-col"
                     >
                       <span className="text-[10px] uppercase font-bold tracking-[0.3em] text-sage/40 mb-2">Signature Experience</span>
                       Bespoke Scoops
@@ -215,7 +215,7 @@ export default function Navbar() {
                 </div>
               </div>
 
-              <div className="space-y-8 bg-white/50 p-8 rounded-[2rem] border border-chocolate/5">
+              <div className="mt-auto pt-10 pb-12 md:pb-8 space-y-6">
                  <button 
                    onClick={() => { toggleMusic(); }}
                    className="flex items-center gap-4 text-chocolate font-outfit text-sm font-bold uppercase tracking-widest"
@@ -223,18 +223,22 @@ export default function Navbar() {
                    <div className={`w-10 h-10 rounded-full flex items-center justify-center ${isMusicPlaying ? 'bg-autumn-orange text-white animate-pulse' : 'bg-chocolate/5 text-chocolate'}`}>
                      {isMusicPlaying ? <VolumeX className="w-4 h-4" /> : <Music className="w-4 h-4" />}
                    </div>
-                   {isMusicPlaying ? "Mute Background Melodies" : "Enable Ambient Music"}
+                   <span className="text-[11px]">{isMusicPlaying ? "Mute Melodies" : "Play Melodies"}</span>
                  </button>
                  
-                 <div className="flex gap-4">
-                    <div className="flex-1 p-4 bg-chocolate text-cream rounded-2xl text-center">
-                       <p className="text-[8px] uppercase font-bold tracking-widest opacity-50 mb-1">Status</p>
+                 <div className="flex gap-3">
+                    <div className="flex-1 p-3 bg-chocolate text-cream rounded-2xl text-center shadow-lg">
+                       <p className="text-[7px] uppercase font-bold tracking-widest opacity-50 mb-1">Status</p>
                        <p className="text-[10px] font-bold">Open Daily</p>
                     </div>
-                    <div className="flex-1 p-4 bg-sage/10 text-sage rounded-2xl text-center border border-sage/10">
-                       <p className="text-[8px] uppercase font-bold tracking-widest opacity-50 mb-1">Contact</p>
-                       <p className="text-[10px] font-bold">WhatsApp Us</p>
-                    </div>
+                    <Link 
+                      href="https://wa.me/919123456789"
+                      onClick={() => setIsMobileMenuOpen(false)}
+                      className="flex-1 p-3 bg-sage text-white rounded-2xl text-center border border-sage/10 shadow-lg block"
+                    >
+                       <p className="text-[7px] uppercase font-bold tracking-widest opacity-50 mb-1">Contact</p>
+                       <p className="text-[10px] font-bold">WhatsApp</p>
+                    </Link>
                  </div>
               </div>
             </motion.div>
