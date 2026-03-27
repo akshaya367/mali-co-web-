@@ -1,0 +1,21 @@
+{
+  "name": "malai & co.",
+  "short_name": "malai & co",
+  "description": "Artisanal Premium Kulfi & Dessert Bar",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FDFBF0",
+  "theme_color": "#FDFBF0",
+  "icons": [
+    {
+      "src": "/images/malai_kulfi.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/malai_kulfi.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

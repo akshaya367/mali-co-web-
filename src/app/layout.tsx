@@ -18,6 +18,23 @@ export const metadata: Metadata = {
   title: "malai & co | Crafted Happiness in Every Scoop",
   description: "Experience the art of artisanal desserts. From hand-churned kulfis to luxurious faloodas, malai & co brings a taste of pure bliss to your soul.",
   keywords: ["ice cream", "kulfi", "falooda", "dessert", "premium", " artisanal"],
+  manifest: "/manifest.json",
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: "default",
+    title: "malai & co",
+  },
+  formatDetection: {
+    telephone: false,
+  },
+};
+
+export const viewport = {
+  themeColor: "#FDFBF0",
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
 };
 
 export default function RootLayout({
