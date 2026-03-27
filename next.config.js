@@ -20,9 +20,7 @@ const nextConfig = {
       },
     ],
   },
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
+  // removed eslint since it's inside eslintrc.json instead
   typescript: {
     ignoreBuildErrors: true,
   },
