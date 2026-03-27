@@ -21,13 +21,6 @@ const REVIEWS = [
     avatar: "/images/review_2.jpg",
   },
   {
-    name: "Ananya Iyer",
-    role: "Design Architect",
-    content: "Minimalist but incredibly rich in taste. Their Sea Salt Affogato is a game changer for coffee lovers.",
-    rating: 4.5,
-    avatar: "/images/review_3.jpg",
-  },
-  {
     name: "Rahul Mehra",
     role: "Epicurean Enthusiast",
     content: "The packaging itself is a luxury. Every scoop feels like pure happiness as their tagline says.",
@@ -72,7 +65,7 @@ export default function ReviewsSection() {
   };
 
   return (
-    <section id="reviews" className="py-32 bg-cream/50 relative overflow-hidden">
+    <section id="reviews" className="py-32 bg-[#FDFBF0] relative overflow-hidden">
       <div className="container mx-auto px-6 relative z-10">
         <div className="text-center mb-24">
           <motion.div 
@@ -104,7 +97,7 @@ export default function ReviewsSection() {
                 className="w-full"
               >
                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-                    <div className="relative aspect-square md:aspect-video lg:aspect-square rounded-[3rem] overflow-hidden shadow-2xl group">
+                    <div className="relative aspect-square md:aspect-video lg:aspect-square rounded-[3rem] overflow-hidden shadow-2xl group border-8 border-white">
                        <Image 
                          src={REVIEWS[index].avatar || "/images/malai_kulfi.png"} 
                          alt={REVIEWS[index].name} 
@@ -166,7 +159,7 @@ export default function ReviewsSection() {
 
       <div className="absolute -bottom-20 -left-20 w-80 h-80 bg-autumn-orange/5 rounded-full blur-3xl" />
       <div className="absolute top-1/2 right-10 -translate-y-1/2 opacity-[0.03] select-none pointer-events-none rotate-90">
-         <span className="text-[18rem] font-playfair font-black text-chocolate">ARTISANAL</span>
+         <span className="text-[18rem] font-playfair font-black text-chocolate uppercase">Happiness</span>
       </div>
     </section>
   );
