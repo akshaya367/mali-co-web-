@@ -118,7 +118,7 @@ Please confirm my order.`;
                 >
                   <div className="text-sage font-outfit text-[10px] font-bold uppercase tracking-[0.4em] mb-8 animate-pulse italic">Awaiting Secure Payment</div>
                   <div className="relative w-64 h-64 mb-8 border-8 border-sage/5 rounded-[3rem] p-8 bg-[#FDFBF0] shadow-inner group">
-                    <Image src="/images/luxury_qr.png" alt="Luxury QR Code" fill className="object-contain p-4 group-hover:scale-110 transition-transform duration-700" />
+                    <Image src="/images/demo_qr.png" alt="Luxury QR Code" fill className="object-contain p-4 group-hover:scale-110 transition-transform duration-700" />
                     <div className="absolute inset-0 bg-gradient-to-tr from-sage/10 via-transparent to-white/20 pointer-events-none" />
                   </div>
                   <div className="flex items-center gap-3 mb-8 bg-sage/5 px-6 py-3 rounded-full border border-sage/10 text-sage">
